@@ -1,0 +1,36 @@
+.composition {
+    position: relative;
+    &__photo {
+        width: 55%;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        border-radius: $border-radius-small;
+        position: absolute;
+        z-index: 2;
+        transition: all .3s;
+        outline-offset: 2rem;
+        &--p1 {
+            left: 0rem;
+            top: -2rem;
+        }
+        &--p2 {
+            right: 0;
+            top: 2rem;
+        }
+        &--p3 {
+            left: 20%;
+            top: 10rem;
+        }
+        &:hover {
+            outline: 1.5rem solid $color-primary;
+            transform: scale(1.06);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            z-index: 20;
+        }
+    }
+    //this :hover state is on the composition > and scales out on photos not //hovered on
+    &:hover &__photo:not(:hover) {
+        transform: scale(.8) translateY(-5rem);
+    }
+}
+
+// End of composition
