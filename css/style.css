@@ -11,7 +11,8 @@ $breakpoint argument choices
 -tab-port
 -tab-land
 -big-desktop
-ORDER: Base + Typography > general layout + grid > page layout > components
+WHEN WRITING MEDIA QUERIES:: 
+THE ORDER IS: Base + Typography > general layout + grid > page layout > components
 1 em = 16px 
 
 
@@ -72,7 +73,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #525050;
+  color: #D8DEE9;
   padding: 3rem; }
 
 .heading-primary {
@@ -181,7 +182,7 @@ body {
 
 .btn--white {
   background-color: #fff;
-  color: #525050; }
+  color: #D8DEE9; }
   .btn--white::after {
     background-color: #fff; }
 
@@ -387,7 +388,7 @@ body {
   .form__input:focus:invalid {
     border-bottom: 4px solid #ff7730; }
   .form__input::-webkit-input-placeholder {
-    color: #525050; }
+    color: #D8DEE9; }
 
 .form__label {
   font-size: 1.2rem;
@@ -531,7 +532,7 @@ body {
     -webkit-column-count: 2;
     column-count: 2;
     column-gap: 4rem;
-    column-rule: 2px solid #525050;
+    column-rule: 2px solid #D8DEE9;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
@@ -543,7 +544,7 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); }
   .popup__close:link, .popup__close:visited {
-    color: #525050;
+    color: #D8DEE9;
     position: absolute;
     top: 2.5rem;
     right: 2.5rem;
@@ -567,7 +568,7 @@ body {
     width: 15rem;
     height: auto; }
   .footer__navigation {
-    border-top: 1px solid #525050;
+    border-top: 1px solid #D8DEE9;
     padding-top: 2rem;
     display: inline-block; }
   .footer__list {
