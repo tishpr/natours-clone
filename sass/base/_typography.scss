@@ -4,7 +4,6 @@
             // font-size: $default-font-size;
             line-height: 1.7;
             color: $color-dark-grey-2;
-            padding: 3rem;
         }
         
         .heading-primary {
@@ -21,6 +20,11 @@
                 animation-duration: 1.3s;
                 animation-timing-function: ease-out;
                 /* perfect code above for top heading */
+                // this include to reduce size on phones
+                @include respond(phone) {
+                    letter-spacing: 1rem;
+                    font-size: 5rem;
+                }
             }
             &--sub {
                 display: block;
@@ -28,6 +32,9 @@
                 font-weight: 700;
                 letter-spacing: 1.74rem;
                 animation: moveInRight 1s ease-out;
+                @include respond(phone) {
+                    letter-spacing: .5rem;
+                }
             }
         }
         
@@ -43,6 +50,12 @@
             color: transparent;
             letter-spacing: 2px;
             transition: all .2s;
+            @include respond(tab-port) {
+                font-size: 3rem;
+            }
+            @include respond(phone) {
+                font-size: 2.5rem;
+            }
             &:hover {
                 transform: skewY(8deg) skewX(15deg);
                 text-shadow: .5rem 1rem 2rem rgba($color-black, .5)
