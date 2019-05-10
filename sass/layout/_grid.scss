@@ -3,12 +3,29 @@
     margin: 0 auto; // two values are //specified, the first margin applies to the top and bottom, the second //to the left and right.
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+        // bottom margin small on tablet 
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+            padding: 0 2rem;
+        }
+    }
+    @include respond(tab-port) {
+        max-width: 50rem;
     }
     @include clearfix;
     [class^="col-"] {
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+            @include respond(tab-port) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+        // mobil breakpoint starting at 900
+        // make cards fill width
+        @include respond(tab-port) {
+            width: 100% !important;
         }
     }
     .col-1-of-2 {
